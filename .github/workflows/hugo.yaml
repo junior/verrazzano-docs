@@ -53,17 +53,18 @@ jobs:
       - name: Build production documentation
         env:
           # For maximum backward compatibility with Hugo modules
+          # --baseURL "${{ steps.pages.outputs.base_url }}/"
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
           hugo \
             --gc \
             --environment production \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
+            --destination production
+      - name: Upload production artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: ./production
 
   # Deployment job
   deploy:
