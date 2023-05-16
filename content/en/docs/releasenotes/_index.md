@@ -1,13 +1,13 @@
 ---
 title: Release Notes
 linkTitle: Release Notes
-weight: 16
+weight: 2
 draft: false
 ---
 ### v1.6.0
 Component version updates:
 - Jaeger v1.42.0
-- Rancher 2.7.2
+- Rancher 2.7.3
 - WebLogic Kubernetes Operator v4.0.6
 - WebLogic Monitoring Exporter v2.1.3
 
@@ -23,8 +23,8 @@ Component version updates:
 
 Fixes:
 - Disabled the `startupapicheck` job during cert-manager startup.
-- Fixed an install bug related to incorrect ingress names in certain configurations.
-- Fixed an ArgoCD bug to reuse Rancher auth tokens when applicable.
+- Fixed an installation issue related to incorrect ingress names in certain configurations.
+- Fixed an ArgoCD issue to reuse Rancher auth tokens when applicable.
 
 ### v1.5.2
 Component version updates:
@@ -86,6 +86,14 @@ Fixes:
 - Fixed IngressTrait JWT related issues to allow multiple paths where one path has `RequestPrincipals` and the other doesn't.
 - Fixed IngressTrait JWT so that `RequestPrincipals` with no paths are allowed.
 - Fixed IngressTrait related `AuthorizationPolicy` cleanup when an application is deleted.
+
+### v1.4.5
+Fixes:
+- Updated base and other images for issues and security.
+
+Component version updates:
+- WebLogic Kubernetes Operator v4.0.6
+- WebLogic Monitoring Exporter v2.1.3
 
 ### v1.4.4
 Fixes:

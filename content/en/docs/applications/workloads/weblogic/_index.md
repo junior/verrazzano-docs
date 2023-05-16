@@ -17,7 +17,7 @@ Do not label a namespace which is managed by the pre-existing WebLogic Kubernete
 
 ## WebLogic OAM Component
 
-In Verrazzano, WebLogic workloads are specified as a [VerrazzanoWebLogicWorkload]({{< relref "/docs/reference/API/vao-oam-v1alpha1#oam.verrazzano.io/v1alpha1.VerrazzanoWebLogicWorkload" >}}) OAM Component and one component specifies exactly one WebLogic domain. An `ApplicationConfiguration` can contain multiple `VerrazzanoWebLogicWorkload` components and therefore, multiple WebLogic domains. You can specify `Traits` for one or more `VerrazzanoWebLogicWorkload` components. All WebLogic Domain CR fields can be specified in the `VerrazzanoWebLogicWorkload`.
+In Verrazzano, WebLogic workloads are specified as a [VerrazzanoWebLogicWorkload]({{< relref "/docs/reference/vao-oam-v1alpha1#oam.verrazzano.io/v1alpha1.VerrazzanoWebLogicWorkload" >}}) OAM Component and one component specifies exactly one WebLogic domain. An `ApplicationConfiguration` can contain multiple `VerrazzanoWebLogicWorkload` components and therefore, multiple WebLogic domains. You can specify `Traits` for one or more `VerrazzanoWebLogicWorkload` components. All WebLogic Domain CR fields can be specified in the `VerrazzanoWebLogicWorkload`.
 
 
 The following is an example WebLogic OAM Component.
@@ -283,12 +283,12 @@ Step 1. Create a WebLogic domain image.
 
 Step 2. Create a VerrazzanoWebLogicWorkload component.
    - To deploy and run the WebLogic domain image in Verrazzano, create the VerrazzanoWebLogicWorkload component that specifies the definition and parameters for the WebLogic domain contained in the image.
-   - For an example VerrazzanoWebLogicWorkload Component resource created for a sample WebLogic domain, see the [todo-domain]({{< relref "/docs/reference/API/vao-oam-v1alpha1#oam.verrazzano.io/v1alpha1.VerrazzanoWebLogicWorkload" >}}) example.
+   - For an example VerrazzanoWebLogicWorkload Component resource created for a sample WebLogic domain, see the [todo-domain]({{< relref "/docs/reference/vao-oam-v1alpha1#oam.verrazzano.io/v1alpha1.VerrazzanoWebLogicWorkload" >}}) example.
    - For all the options supported by the WebLogic domain configuration, see [Domain.md](https://github.com/oracle/weblogic-kubernetes-operator/blob/main/documentation/domains/Domain.md).
 
 Step 3. Create an ApplicationConfiguration for the WebLogic application.
    - Next, create an ApplicationConfiguration that uses the VerrazzanoWebLogicWorkload component you created for the WebLogic domain.
-   - For an example ApplicationConfiguration using a VerrazzanoWebLogicWorkload component, see the [ToDo List]({{< relref "/docs/samples/todo-list.md" >}}) example application.
+   - For an example ApplicationConfiguration using a VerrazzanoWebLogicWorkload component, see the [ToDo List]({{< relref "/docs/examples/wls-coh/todo-list.md" >}}) example application.
 
 Step 4. Verify the domain.
    - Verrazzano creates the underlying domain Kubernetes resource from the VerrazzanoWebLogicWorkload component, which is then processed by the WebLogic Kubernetes Operator to create the Administration and Managed Server pods, and deploy the applications and resources associated with the WebLogic domain.
@@ -305,7 +305,7 @@ Step 1. Deploy the database in Verrazzano.
 
 Step 2. Create a WebLogic resource ConfigMap.
    - Next, create a ConfigMap that will contain the JDBCSystemResource definition with connection information for the database.
-   - For an example, see the  `tododomain-configmap` definition in the [ToDo List]({{< relref "/docs/samples/todo-list.md" >}}) example application configuration.
+   - For an example, see the  `tododomain-configmap` definition in the [ToDo List]({{< relref "/docs/examples/wls-coh/todo-list.md" >}}) example application configuration.
 
 Step 3. Configure the WebLogic domain to use the WebLogic resource ConfigMap.
    - You can configure the ConfigMap, containing the resource information for the JDBCSystemResource, in the configuration section of the VerrazzanoWebLogicWorkload component of the WebLogic domain.
@@ -321,11 +321,11 @@ Step 3. Configure the WebLogic domain to use the WebLogic resource ConfigMap.
 ...
 ```
 {{< /clipboard >}}
-For more details, see the [ToDo List]({{< relref "/docs/samples/todo-list.md" >}}) example application configuration.
+For more details, see the [ToDo List]({{< relref "/docs/examples/wls-coh/todo-list.md" >}}) example application configuration.
 
 ## Ingresses
 
-To access the endpoints for a Java EE application deployed as part of a VerrazzanoWebLogicWorkload component, Verrazzano lets you specify an IngressTrait for the component which is then translated to an [Istio ingress gateway](https://istio.io/latest/docs/reference/config/networking/gateway/) and [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/). For an example, see the [ToDo List]({{< relref "/docs/samples/todo-list.md" >}}) example application, where the IngressTrait is configured for the application endpoint.
+To access the endpoints for a Java EE application deployed as part of a VerrazzanoWebLogicWorkload component, Verrazzano lets you specify an IngressTrait for the component which is then translated to an [Istio ingress gateway](https://istio.io/latest/docs/reference/config/networking/gateway/) and [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/). For an example, see the [ToDo List]({{< relref "/docs/examples/wls-coh/todo-list.md" >}}) example application, where the IngressTrait is configured for the application endpoint.
 {{< clipboard >}}
 
 ```yaml
@@ -344,7 +344,7 @@ To access the endpoints for a Java EE application deployed as part of a Verrazza
 ```
 {{< /clipboard >}}
 
-Then, you can access the endpoint using the Istio gateway, as described in Step 8. [Access the ToDo List application]({{< relref "/docs/samples/todo-list.md" >}}).
+Then, you can access the endpoint using the Istio gateway, as described in Step 8. [Access the ToDo List application]({{< relref "/docs/examples/wls-coh/todo-list.md" >}}).
 {{< clipboard >}}
 <div class="highlight">
 
