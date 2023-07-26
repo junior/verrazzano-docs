@@ -1,9 +1,10 @@
 ---
 title: "Configure Tracing Components"
-linkTitle: Configure Tracing
 description: "Enable and configure Jaeger distributed tracing in Verrazzano"
 weight: 3
 draft: false
+aliases:
+  - /docs/monitoring/tracing/jaeger-tracing
 ---
 
 This document describes how to enable Jaeger and customize your Jaeger installation to address some common tracing needs.
@@ -63,7 +64,13 @@ If the Jaeger Operator component is enabled in the managed cluster, after succes
 a Jaeger collector service runs in the managed cluster, which exports the traces to the OpenSearch
 storage configured in the admin cluster.
 
-**NOTE**: Traces are exported to the admin cluster only when the Jaeger instance in the admin cluster is configured with the OpenSearch storage.
+**NOTES**:
+   - Traces are exported to the admin cluster only when the Jaeger instance in the admin cluster is configured with OpenSearch storage.
+   - If the admin cluster is unavailable or the storage backend, OpenSearch, is not operational, then Jaeger will start dropping traces because it cannot buffer much data. To buffer large amounts of data, you would need to set up an intermediary queue, such as [Kafka](https://www.jaegertracing.io/docs/{{<jaeger_doc_version>}}/deployment/#kafka). This would prevent data loss from Jaeger collectors.
+
+The following graphic illustrates managed clusters exporting data to the admin cluster, with Jaeger instances and OpenSearch backend storage.
+
+![MC Tracing](/docs/images/tracing/jaeger-mc-tracing.png)
 
 Listing Jaeger resources in the managed cluster shows output similar to the following.
 {{< clipboard >}}
@@ -83,7 +90,7 @@ jaeger-verrazzano-managed-cluster   Running   1.34.1    production   opensearch 
 ### Customize Jaeger
 
 Verrazzano installs the Jaeger Operator and Jaeger using the
-[jaeger-operator](https://github.com/jaegertracing/helm-charts/tree/jaeger-operator-{{<jaeger_operator_helm_chart_version>}}/charts/jaeger-operator) Helm chart.
+[jaeger-operator]({{% release_source_url path=platform-operator/thirdparty/charts/jaegertracing/jaeger-operator %}}) Helm chart.
 Using Helm overrides specified in the Verrazzano custom resource, you can customize the installation configuration.
 For more information about setting component overrides, see [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing).
 
@@ -111,8 +118,8 @@ with a TLS CA certificate mounted from a volume and the user/password stored in 
 
    ```
    $ kubectl create secret generic jaeger-secret \
-    --from-literal=OS_PASSWORD=<OPENSEARCH PASSWORD> \
-    --from-literal=OS_USERNAME=<OPENSEARCH USERNAME> \
+    --from-literal=ES_PASSWORD=<OPENSEARCH PASSWORD> \
+    --from-literal=ES_USERNAME=<OPENSEARCH USERNAME> \
     --from-file=ca-bundle=<path to the file containing CA certs> \
     -n verrazzano-install
    ```

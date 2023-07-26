@@ -23,7 +23,7 @@ Verrazzano uses Istio to authenticate and authorize incoming network connections
 Enforcement of NetworkPolicy requires that a Kubernetes Container Network Interface (CNI) provider, such as Calico, be configured for the cluster.
 {{< /alert >}}
 
-For more information on how Verrazzano secures network traffic, see [Network Security]({{< relref "/docs/networking/security/net-security.md" >}}).
+For more information on how Verrazzano secures network traffic, see [Network Security]({{< relref "/docs/networking/security/_index.md" >}}).
 
 ## Pod security
 
@@ -35,7 +35,7 @@ This essentially means running the container within a pod as a non-root user wit
 escalate privileges.  Each container image also should define a non-root user identity that the container process will
 run, as by default, for added security.
 
-In the Kubernetes `Pod` specification, there is a [Pod SecurityContext](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#podsecuritycontext-v1-core)
+In the Kubernetes `Pod` specification, there is a [Pod SecurityContext](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#podsecuritycontext-v1-core)
 for defining security at the pod level and a
 [Container SecurityContext](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#securitycontext-v1-core) used
 to define security for containers.  Some fields are common between the two security contexts, and others are unique.  For details, see
@@ -203,10 +203,7 @@ specify a non-root user, using the `USER` instruction in the container image bui
 
 ## Pod security for applications using standard Kubernetes resources
 
-You can deploy applications using standard Kubernetes resources, as described in the [Standard Kubernetes Resources]({{< relref "/docs/examples/standard-kubernetes.md" >}})
-example.
-
-You configure security for these resources as you typically would for any Kubernetes `Deployment` resource.  
+You can deploy applications using standard Kubernetes resources. You configure security for these resources as you typically would for any Kubernetes `Deployment` resource.  
 
 For example:
 

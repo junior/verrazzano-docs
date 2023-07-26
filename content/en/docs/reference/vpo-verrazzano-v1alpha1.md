@@ -11,17 +11,17 @@ aliases:
 </li>
 </ul>
 <h2 id="install.verrazzano.io/v1alpha1">install.verrazzano.io/v1alpha1</h2>
-<p>
-</p>
+<div>
+</div>
 Resource Types:
 <ul><li>
 <a href="#install.verrazzano.io/v1alpha1.Verrazzano">Verrazzano</a>
 </li></ul>
 <h3 id="install.verrazzano.io/v1alpha1.Verrazzano">Verrazzano
 </h3>
-<p>
+<div>
 <p>Verrazzano specifies the Verrazzano API.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -32,7 +32,7 @@ Resource Types:
 <tbody>
 <tr>
 <td>
-<code>apiVersion</code></br>
+<code>apiVersion</code><br/>
 string</td>
 <td>
 <code>
@@ -42,14 +42,14 @@ install.verrazzano.io/v1alpha1
 </tr>
 <tr>
 <td>
-<code>kind</code></br>
+<code>kind</code><br/>
 string
 </td>
 <td><code>Verrazzano</code></td>
 </tr>
 <tr>
 <td>
-<code>metadata</code></br>
+<code>metadata</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#objectmeta-v1-meta">
 Kubernetes meta/v1.ObjectMeta
@@ -63,7 +63,7 @@ Refer to the Kubernetes API documentation for the fields of the
 </tr>
 <tr>
 <td>
-<code>spec</code></br>
+<code>spec</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">
 VerrazzanoSpec
@@ -76,7 +76,7 @@ VerrazzanoSpec
 <table>
 <tr>
 <td>
-<code>components</code></br>
+<code>components</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ComponentSpec">
 ComponentSpec
@@ -90,7 +90,7 @@ ComponentSpec
 </tr>
 <tr>
 <td>
-<code>defaultVolumeSource</code></br>
+<code>defaultVolumeSource</code><br/>
 <em>
 <a href="https://pkg.go.dev/k8s.io/api/core/v1#VolumeSource">
 Kubernetes core/v1.VolumeSource
@@ -107,7 +107,7 @@ declared, then the <code>claimName</code> must reference the name of an existing
 </tr>
 <tr>
 <td>
-<code>environmentName</code></br>
+<code>environmentName</code><br/>
 <em>
 string
 </em>
@@ -120,7 +120,7 @@ The default value is <code>default</code>.</p>
 </tr>
 <tr>
 <td>
-<code>profile</code></br>
+<code>profile</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ProfileType">
 ProfileType
@@ -135,7 +135,7 @@ The default is <code>prod</code>.</p>
 </tr>
 <tr>
 <td>
-<code>security</code></br>
+<code>security</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.SecuritySpec">
 SecuritySpec
@@ -149,7 +149,7 @@ SecuritySpec
 </tr>
 <tr>
 <td>
-<code>version</code></br>
+<code>version</code><br/>
 <em>
 string
 </em>
@@ -163,7 +163,7 @@ Defaults to the current version supported by the Verrazzano platform operator.</
 </tr>
 <tr>
 <td>
-<code>volumeClaimSpecTemplates</code></br>
+<code>volumeClaimSpecTemplates</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VolumeClaimSpecTemplate">
 []VolumeClaimSpecTemplate
@@ -180,7 +180,7 @@ Defaults to the current version supported by the Verrazzano platform operator.</
 </tr>
 <tr>
 <td>
-<code>status</code></br>
+<code>status</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">
 VerrazzanoStatus
@@ -195,12 +195,11 @@ VerrazzanoStatus
 <h3 id="install.verrazzano.io/v1alpha1.Acme">Acme
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.Certificate">Certificate</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.Certificate">Certificate</a>)
 </p>
-<p>
-<p>Acme identifies the ACME cert issuer.</p>
-</p>
+<div>
+<p>Deprecated. Acme identifies the LetsEncrypt cert issuer.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -211,7 +210,7 @@ VerrazzanoStatus
 <tbody>
 <tr>
 <td>
-<code>emailAddress</code></br>
+<code>emailAddress</code><br/>
 <em>
 string
 </em>
@@ -223,7 +222,7 @@ string
 </tr>
 <tr>
 <td>
-<code>environment</code></br>
+<code>environment</code><br/>
 <em>
 string
 </em>
@@ -235,7 +234,7 @@ string
 </tr>
 <tr>
 <td>
-<code>provider</code></br>
+<code>provider</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ProviderType">
 ProviderType
@@ -251,12 +250,11 @@ ProviderType
 <h3 id="install.verrazzano.io/v1alpha1.ApplicationOperatorComponent">ApplicationOperatorComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>ApplicationOperatorComponent specifies the Application Operator configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -267,7 +265,7 @@ ProviderType
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -279,23 +277,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/helm_config/charts/verrazzano-application-operator/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -303,12 +314,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.ArgoCDComponent">ArgoCDComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>ArgoCDComponent specifies the Argo CD configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -319,7 +329,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -331,23 +341,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/argo-cd/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -355,12 +378,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.AuthProxyComponent">AuthProxyComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>AuthProxyComponent specifies the AuthProxy configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -371,7 +393,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -383,28 +405,41 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/helm_config/charts/verrazzano-authproxy/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>kubernetes</code></br>
+<code>kubernetes</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.AuthProxyKubernetesSection">
 AuthProxyKubernetesSection
@@ -421,12 +456,11 @@ AuthProxyKubernetesSection
 <h3 id="install.verrazzano.io/v1alpha1.AuthProxyKubernetesSection">AuthProxyKubernetesSection
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.AuthProxyComponent">AuthProxyComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.AuthProxyComponent">AuthProxyComponent</a>)
 </p>
-<p>
+<div>
 <p>AuthProxyKubernetesSection specifies the Kubernetes resources that can be customized for AuthProxy.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -437,17 +471,34 @@ AuthProxyKubernetesSection
 <tbody>
 <tr>
 <td>
-<code>CommonKubernetesSpec</code></br>
+<code>replicas</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.CommonKubernetesSpec">
-CommonKubernetesSpec
+uint32
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.CommonKubernetesSpec">CommonKubernetesSpec</a>.)
+</p>
+<em>(Optional)</em>
+<p>Specifies the number of pod instances to run.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>affinity</code><br/>
+<em>
+<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#affinity-v1-core">
+Kubernetes core/v1.Affinity
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>CommonKubernetesSpec</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.CommonKubernetesSpec">CommonKubernetesSpec</a>.)
 </p>
+<em>(Optional)</em>
+<p>Specifies the group of affinity scheduling rules.</p>
 </td>
 </tr>
 </tbody>
@@ -455,12 +506,11 @@ CommonKubernetesSpec
 <h3 id="install.verrazzano.io/v1alpha1.CA">CA
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.Certificate">Certificate</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.Certificate">Certificate</a>)
 </p>
-<p>
-<p>CA identifies the Certificate Authority cert issuer.</p>
-</p>
+<div>
+<p>CA - Deprecated.  Identifies the Certificate Authority cert issuer.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -471,7 +521,7 @@ CommonKubernetesSpec
 <tbody>
 <tr>
 <td>
-<code>clusterResourceNamespace</code></br>
+<code>clusterResourceNamespace</code><br/>
 <em>
 string
 </em>
@@ -482,7 +532,7 @@ string
 </tr>
 <tr>
 <td>
-<code>secretName</code></br>
+<code>secretName</code><br/>
 <em>
 string
 </em>
@@ -493,15 +543,14 @@ string
 </tr>
 </tbody>
 </table>
-<h3 id="install.verrazzano.io/v1alpha1.CAPIComponent">CAPIComponent
+<h3 id="install.verrazzano.io/v1alpha1.CAIssuer">CAIssuer
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ClusterIssuerComponent">ClusterIssuerComponent</a>, <a href="#install.verrazzano.io/v1alpha1.IssuerConfig">IssuerConfig</a>)
 </p>
-<p>
-<p>CAPIComponent specifies the CAPI configuration.</p>
-</p>
+<div>
+<p>CAIssuer Identifies the configuration used for the Certificate Authority issuer</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -512,14 +561,13 @@ string
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>secretName</code><br/>
 <em>
-bool
+string
 </em>
 </td>
 <td>
-<em>(Optional)</em>
-<p>If true, then CAPI Providers will be installed.</p>
+<p>The secret name.</p>
 </td>
 </tr>
 </tbody>
@@ -527,12 +575,11 @@ bool
 <h3 id="install.verrazzano.io/v1alpha1.CertManagerComponent">CertManagerComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>CertManagerComponent specifies the cert-manager configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -543,7 +590,7 @@ bool
 <tbody>
 <tr>
 <td>
-<code>certificate</code></br>
+<code>certificate</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.Certificate">
 Certificate
@@ -552,12 +599,12 @@ Certificate
 </td>
 <td>
 <em>(Optional)</em>
-<p>The certificate configuration.</p>
+<p>Deprecated.  Use the ClusterIssuerComponent to configure the Verrazzano ClusterIssuer instead</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -569,36 +616,46 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/cert-manager/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<h3 id="install.verrazzano.io/v1alpha1.Certificate">Certificate
+<h3 id="install.verrazzano.io/v1alpha1.CertManagerOCIDNSWebhookSolver">CertManagerOCIDNSWebhookSolver
 </h3>
-<p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.CertManagerComponent">CertManagerComponent</a>)
-</p>
-<p>
-<p>Certificate represents the type of cert issuer for an installation.</p>
-</p>
+<div>
+<p>CertManagerOCIDNSWebhookSolver specifies installation overrides for the CertManager OCI DNS solver webhook; the
+webhook is automatically installed when OCI DNS is configured for the Verrazzano installation</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -609,7 +666,124 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>acme</code></br>
+<code>monitorChanges</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.CertManagerWebhookOCIComponent">CertManagerWebhookOCIComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+</p>
+<div>
+<p>CertManagerWebhookOCIComponent configures the CertManager OCI DNS solver webhook; the
+webhook is required for LetsEncrypt Certificates using OCI DNS</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>enabled</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>Enabled will deploy the webhook if true, or if the LetsEncrypt issuer is configured with OCI DNS</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>monitorChanges</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.Certificate">Certificate
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.CertManagerComponent">CertManagerComponent</a>)
+</p>
+<div>
+<p>Certificate - Deprecated. Represents the type of cert issuer for an installation.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>acme</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.Acme">
 Acme
@@ -618,12 +792,12 @@ Acme
 </td>
 <td>
 <em>(Optional)</em>
-<p>The ACME configuration. Either <code>acme</code> or <code>ca</code> must be specified.</p>
+<p>The LetsEncrypt configuration. Either <code>acme</code> or <code>ca</code> must be specified.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>ca</code></br>
+<code>ca</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.CA">
 CA
@@ -632,20 +806,19 @@ CA
 </td>
 <td>
 <em>(Optional)</em>
-<p>The ACME configuration. Either <code>acme</code> or <code>ca</code> must be specified.</p>
+<p>The LetsEncrypt configuration. Either <code>acme</code> or <code>ca</code> must be specified.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<h3 id="install.verrazzano.io/v1alpha1.ClusterOperatorComponent">ClusterOperatorComponent
+<h3 id="install.verrazzano.io/v1alpha1.ClusterAPIComponent">ClusterAPIComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
-<p>ClusterOperatorComponent specifies the Cluster Operator configuration.</p>
-</p>
+<div>
+<p>ClusterAPIComponent specifies the Cluster API configuration.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -656,7 +829,212 @@ CA
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>If true, then Cluster API Providers will be installed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>monitorChanges</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.ClusterAgentComponent">ClusterAgentComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+</p>
+<div>
+<p>ClusterAgentComponent configures the Cluster Agent</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>enabled</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>If true, then Cluster Agent will be installed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>monitorChanges</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.ClusterIssuerComponent">ClusterIssuerComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+</p>
+<div>
+<p>ClusterIssuerComponent configures the Verrazzano ClusterIssuer</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>enabled</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>Enabled indicates that Verrazzano ClusterIssuer shall be configured</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>clusterResourceNamespace</code><br/>
+<em>
+string
+</em>
+</td>
+<td>
+<p>The clusterResourceNamespace configured for the Verrazzano Cert-Manager instance; if an externally-managed
+Cert-Manager is being used with a non-default location, this should point to the clusterResourceNamespace used by
+that installation. See the Cert-Manager documentation details on this namespace.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>letsEncrypt</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.LetsEncryptACMEIssuer">
+LetsEncryptACMEIssuer
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.IssuerConfig">IssuerConfig</a>.)
+</p>
+<em>(Optional)</em>
+<p>The certificate configuration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>ca</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.CAIssuer">
+CAIssuer
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.IssuerConfig">IssuerConfig</a>.)
+</p>
+<em>(Optional)</em>
+<p>The certificate configuration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.ClusterOperatorComponent">ClusterOperatorComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+</p>
+<div>
+<p>ClusterOperatorComponent specifies the Cluster Operator configuration.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -668,23 +1046,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/helm_config/charts/verrazzano-cluster-operator/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -692,12 +1083,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.CoherenceOperatorComponent">CoherenceOperatorComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>CoherenceOperatorComponent specifies the Coherence Operator configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -708,7 +1098,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -720,37 +1110,45 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/coherence-operator/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.CommonKubernetesSpec">CommonKubernetesSpec
 </h3>
-<p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.AuthProxyKubernetesSection">AuthProxyKubernetesSection</a>,
-<a href="#install.verrazzano.io/v1alpha1.IstioKubernetesSection">IstioKubernetesSection</a>)
-</p>
-<p>
+<div>
 <p>Kubernetes resources that are common to a subgroup of components.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -761,7 +1159,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>replicas</code></br>
+<code>replicas</code><br/>
 <em>
 uint32
 </em>
@@ -773,7 +1171,7 @@ uint32
 </tr>
 <tr>
 <td>
-<code>affinity</code></br>
+<code>affinity</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#affinity-v1-core">
 Kubernetes core/v1.Affinity
@@ -788,32 +1186,65 @@ Kubernetes core/v1.Affinity
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.CompStateType">CompStateType
-(<code>string</code> alias)</p></h3>
+(<code>string</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentStatusDetails">ComponentStatusDetails</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentStatusDetails">ComponentStatusDetails</a>)
 </p>
-<p>
+<div>
 <p>CompStateType identifies the state of a component.</p>
-</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr><td><p>&#34;Disabled&#34;</p></td>
+<td><p>CompStateDisabled is the state for when a component is not currently installed</p>
+</td>
+</tr><tr><td><p>&#34;Error&#34;</p></td>
+<td><p>CompStateError is the state when a Verrazzano resource has experienced an error that may leave it in an unstable state</p>
+</td>
+</tr><tr><td><p>&#34;Failed&#34;</p></td>
+<td><p>CompStateFailed is the state when an install/uninstall/upgrade has failed</p>
+</td>
+</tr><tr><td><p>&#34;Installing&#34;</p></td>
+<td><p>CompStateInstalling is the state when an install is in progress</p>
+</td>
+</tr><tr><td><p>&#34;PreInstalling&#34;</p></td>
+<td><p>CompStatePreInstalling is the state when an install is about to be started</p>
+</td>
+</tr><tr><td><p>&#34;Ready&#34;</p></td>
+<td><p>CompStateReady is the state when a Verrazzano resource can perform an uninstall or upgrade</p>
+</td>
+</tr><tr><td><p>&#34;Uninstalled&#34;</p></td>
+<td><p>CompStateUninstalled is the state when a component has been uninstalled</p>
+</td>
+</tr><tr><td><p>&#34;Uninstalling&#34;</p></td>
+<td><p>CompStateUninstalling is the state when an uninstall is in progress</p>
+</td>
+</tr><tr><td><p>&#34;Upgrading&#34;</p></td>
+<td><p>CompStateUpgrading is the state when an upgrade is in progress</p>
+</td>
+</tr></tbody>
+</table>
 <h3 id="install.verrazzano.io/v1alpha1.ComponentAvailability">ComponentAvailability
-(<code>string</code> alias)</p></h3>
+(<code>string</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentStatusDetails">ComponentStatusDetails</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentStatusDetails">ComponentStatusDetails</a>)
 </p>
-<p>
+<div>
 <p>ComponentAvailability identifies the availability of a Verrazzano Component.</p>
-</p>
+</div>
 <h3 id="install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
 </p>
-<p>
+<div>
 <p>ComponentSpec contains a set of components used by Verrazzano.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -824,7 +1255,7 @@ Kubernetes core/v1.Affinity
 <tbody>
 <tr>
 <td>
-<code>applicationOperator</code></br>
+<code>applicationOperator</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ApplicationOperatorComponent">
 ApplicationOperatorComponent
@@ -838,7 +1269,7 @@ ApplicationOperatorComponent
 </tr>
 <tr>
 <td>
-<code>argoCD</code></br>
+<code>argoCD</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ArgoCDComponent">
 ArgoCDComponent
@@ -852,7 +1283,7 @@ ArgoCDComponent
 </tr>
 <tr>
 <td>
-<code>authProxy</code></br>
+<code>authProxy</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.AuthProxyComponent">
 AuthProxyComponent
@@ -866,21 +1297,49 @@ AuthProxyComponent
 </tr>
 <tr>
 <td>
-<code>capi</code></br>
+<code>clusterAPI</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.CAPIComponent">
-CAPIComponent
+<a href="#install.verrazzano.io/v1alpha1.ClusterAPIComponent">
+ClusterAPIComponent
 </a>
 </em>
 </td>
 <td>
 <em>(Optional)</em>
-<p>The CAPI component configuration.</p>
+<p>The ClusterAPI component configuration.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>certManager</code></br>
+<code>clusterAgent</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.ClusterAgentComponent">
+ClusterAgentComponent
+</a>
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>The ClusterAgent configuration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>clusterIssuer</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.ClusterIssuerComponent">
+ClusterIssuerComponent
+</a>
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>ClusterIssuer defines the Cert-Manager ClusterIssuer configuration for Verrazzano</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>certManager</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.CertManagerComponent">
 CertManagerComponent
@@ -889,12 +1348,27 @@ CertManagerComponent
 </td>
 <td>
 <em>(Optional)</em>
-<p>The cert-manager component configuration.</p>
+<p>The Verrazzano-managed Cert-Manager component configuration; note that this is mutually exclusive of the
+ExternalCertManager component</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>clusterOperator</code></br>
+<code>certManagerWebhookOCI</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.CertManagerWebhookOCIComponent">
+CertManagerWebhookOCIComponent
+</a>
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>CertManagerWebhookOCI configures the Verrazzano OCI DNS webhook plugin for Cert-Manager</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>clusterOperator</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ClusterOperatorComponent">
 ClusterOperatorComponent
@@ -908,7 +1382,7 @@ ClusterOperatorComponent
 </tr>
 <tr>
 <td>
-<code>coherenceOperator</code></br>
+<code>coherenceOperator</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.CoherenceOperatorComponent">
 CoherenceOperatorComponent
@@ -922,7 +1396,7 @@ CoherenceOperatorComponent
 </tr>
 <tr>
 <td>
-<code>console</code></br>
+<code>console</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ConsoleComponent">
 ConsoleComponent
@@ -936,7 +1410,7 @@ ConsoleComponent
 </tr>
 <tr>
 <td>
-<code>dns</code></br>
+<code>dns</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.DNSComponent">
 DNSComponent
@@ -950,7 +1424,7 @@ DNSComponent
 </tr>
 <tr>
 <td>
-<code>elasticsearch</code></br>
+<code>elasticsearch</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ElasticsearchComponent">
 ElasticsearchComponent
@@ -964,7 +1438,7 @@ ElasticsearchComponent
 </tr>
 <tr>
 <td>
-<code>fluentd</code></br>
+<code>fluentd</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.FluentdComponent">
 FluentdComponent
@@ -978,7 +1452,35 @@ FluentdComponent
 </tr>
 <tr>
 <td>
-<code>grafana</code></br>
+<code>fluentOperator</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.FluentOperatorComponent">
+FluentOperatorComponent
+</a>
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>The FluentOperator component configuration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>fluentbitOpensearchOutput</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.FluentbitOpensearchOutputComponent">
+FluentbitOpensearchOutputComponent
+</a>
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>The FluentbitOpensearchOutput component configuration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>grafana</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.GrafanaComponent">
 GrafanaComponent
@@ -992,7 +1494,7 @@ GrafanaComponent
 </tr>
 <tr>
 <td>
-<code>ingress</code></br>
+<code>ingress</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IngressNginxComponent">
 IngressNginxComponent
@@ -1006,7 +1508,7 @@ IngressNginxComponent
 </tr>
 <tr>
 <td>
-<code>istio</code></br>
+<code>istio</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IstioComponent">
 IstioComponent
@@ -1020,7 +1522,7 @@ IstioComponent
 </tr>
 <tr>
 <td>
-<code>jaegerOperator</code></br>
+<code>jaegerOperator</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.JaegerOperatorComponent">
 JaegerOperatorComponent
@@ -1034,7 +1536,7 @@ JaegerOperatorComponent
 </tr>
 <tr>
 <td>
-<code>kiali</code></br>
+<code>kiali</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.KialiComponent">
 KialiComponent
@@ -1048,7 +1550,7 @@ KialiComponent
 </tr>
 <tr>
 <td>
-<code>kibana</code></br>
+<code>kibana</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.KibanaComponent">
 KibanaComponent
@@ -1062,7 +1564,7 @@ KibanaComponent
 </tr>
 <tr>
 <td>
-<code>keycloak</code></br>
+<code>keycloak</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.KeycloakComponent">
 KeycloakComponent
@@ -1076,7 +1578,7 @@ KeycloakComponent
 </tr>
 <tr>
 <td>
-<code>kubeStateMetrics</code></br>
+<code>kubeStateMetrics</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.KubeStateMetricsComponent">
 KubeStateMetricsComponent
@@ -1090,7 +1592,7 @@ KubeStateMetricsComponent
 </tr>
 <tr>
 <td>
-<code>mySQLOperator</code></br>
+<code>mySQLOperator</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.MySQLOperatorComponent">
 MySQLOperatorComponent
@@ -1104,7 +1606,7 @@ MySQLOperatorComponent
 </tr>
 <tr>
 <td>
-<code>oam</code></br>
+<code>oam</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.OAMComponent">
 OAMComponent
@@ -1118,7 +1620,7 @@ OAMComponent
 </tr>
 <tr>
 <td>
-<code>prometheus</code></br>
+<code>prometheus</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.PrometheusComponent">
 PrometheusComponent
@@ -1132,7 +1634,7 @@ PrometheusComponent
 </tr>
 <tr>
 <td>
-<code>prometheusAdapter</code></br>
+<code>prometheusAdapter</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.PrometheusAdapterComponent">
 PrometheusAdapterComponent
@@ -1146,7 +1648,7 @@ PrometheusAdapterComponent
 </tr>
 <tr>
 <td>
-<code>prometheusNodeExporter</code></br>
+<code>prometheusNodeExporter</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.PrometheusNodeExporterComponent">
 PrometheusNodeExporterComponent
@@ -1160,7 +1662,7 @@ PrometheusNodeExporterComponent
 </tr>
 <tr>
 <td>
-<code>prometheusOperator</code></br>
+<code>prometheusOperator</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.PrometheusOperatorComponent">
 PrometheusOperatorComponent
@@ -1174,7 +1676,7 @@ PrometheusOperatorComponent
 </tr>
 <tr>
 <td>
-<code>prometheusPushgateway</code></br>
+<code>prometheusPushgateway</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.PrometheusPushgatewayComponent">
 PrometheusPushgatewayComponent
@@ -1188,7 +1690,7 @@ PrometheusPushgatewayComponent
 </tr>
 <tr>
 <td>
-<code>rancher</code></br>
+<code>rancher</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.RancherComponent">
 RancherComponent
@@ -1202,7 +1704,7 @@ RancherComponent
 </tr>
 <tr>
 <td>
-<code>rancherBackup</code></br>
+<code>rancherBackup</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.RancherBackupComponent">
 RancherBackupComponent
@@ -1216,7 +1718,7 @@ RancherBackupComponent
 </tr>
 <tr>
 <td>
-<code>thanos</code></br>
+<code>thanos</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ThanosComponent">
 ThanosComponent
@@ -1230,7 +1732,7 @@ ThanosComponent
 </tr>
 <tr>
 <td>
-<code>velero</code></br>
+<code>velero</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VeleroComponent">
 VeleroComponent
@@ -1244,7 +1746,7 @@ VeleroComponent
 </tr>
 <tr>
 <td>
-<code>verrazzano</code></br>
+<code>verrazzano</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VerrazzanoComponent">
 VerrazzanoComponent
@@ -1258,7 +1760,7 @@ VerrazzanoComponent
 </tr>
 <tr>
 <td>
-<code>weblogicOperator</code></br>
+<code>weblogicOperator</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.WebLogicOperatorComponent">
 WebLogicOperatorComponent
@@ -1274,9 +1776,9 @@ WebLogicOperatorComponent
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.ComponentStatusDetails">ComponentStatusDetails
 </h3>
-<p>
+<div>
 <p>ComponentStatusDetails defines the observed state of a component.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1287,7 +1789,7 @@ WebLogicOperatorComponent
 <tbody>
 <tr>
 <td>
-<code>available</code></br>
+<code>available</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ComponentAvailability">
 ComponentAvailability
@@ -1300,7 +1802,7 @@ ComponentAvailability
 </tr>
 <tr>
 <td>
-<code>conditions</code></br>
+<code>conditions</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.Condition">
 []Condition
@@ -1313,7 +1815,7 @@ ComponentAvailability
 </tr>
 <tr>
 <td>
-<code>lastReconciledGeneration</code></br>
+<code>lastReconciledGeneration</code><br/>
 <em>
 int64
 </em>
@@ -1324,7 +1826,7 @@ int64
 </tr>
 <tr>
 <td>
-<code>name</code></br>
+<code>name</code><br/>
 <em>
 string
 </em>
@@ -1335,7 +1837,7 @@ string
 </tr>
 <tr>
 <td>
-<code>reconcilingGeneration</code></br>
+<code>reconcilingGeneration</code><br/>
 <em>
 int64
 </em>
@@ -1346,7 +1848,7 @@ int64
 </tr>
 <tr>
 <td>
-<code>state</code></br>
+<code>state</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.CompStateType">
 CompStateType
@@ -1359,7 +1861,7 @@ CompStateType
 </tr>
 <tr>
 <td>
-<code>version</code></br>
+<code>version</code><br/>
 <em>
 string
 </em>
@@ -1371,28 +1873,25 @@ string
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.ComponentStatusMap">ComponentStatusMap
-(<code>map[string]*github.com/verrazzano/verrazzano/platform-operator/apis/verrazzano/v1alpha1.ComponentStatusDetails</code> alias)</p></h3>
+(<code>map[string]*github.com/verrazzano/verrazzano/platform-operator/apis/verrazzano/v1alpha1.ComponentStatusDetails</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
 </p>
-<p>
+<div>
 <p>ComponentStatusMap is a map of components status details.</p>
-</p>
+</div>
 <h3 id="install.verrazzano.io/v1alpha1.ComponentValidator">ComponentValidator
 </h3>
-<p>
-</p>
+<div>
+</div>
 <h3 id="install.verrazzano.io/v1alpha1.Condition">Condition
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentStatusDetails">ComponentStatusDetails</a>,
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentStatusDetails">ComponentStatusDetails</a>, <a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
 </p>
-<p>
+<div>
 <p>Condition describes the current state of an installation.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1403,7 +1902,7 @@ string
 <tbody>
 <tr>
 <td>
-<code>lastTransitionTime</code></br>
+<code>lastTransitionTime</code><br/>
 <em>
 string
 </em>
@@ -1414,7 +1913,7 @@ string
 </tr>
 <tr>
 <td>
-<code>message</code></br>
+<code>message</code><br/>
 <em>
 string
 </em>
@@ -1425,7 +1924,7 @@ string
 </tr>
 <tr>
 <td>
-<code>status</code></br>
+<code>status</code><br/>
 <em>
 <a href="https://pkg.go.dev/k8s.io/api/core/v1#ConditionStatus">
 Kubernetes core/v1.ConditionStatus
@@ -1438,7 +1937,7 @@ Kubernetes core/v1.ConditionStatus
 </tr>
 <tr>
 <td>
-<code>type</code></br>
+<code>type</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ConditionType">
 ConditionType
@@ -1452,23 +1951,63 @@ ConditionType
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.ConditionType">ConditionType
-(<code>string</code> alias)</p></h3>
+(<code>string</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.Condition">Condition</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.Condition">Condition</a>)
 </p>
-<p>
+<div>
 <p>ConditionType identifies the condition of the install, uninstall, or upgrade, which can be checked with <code>kubectl wait</code>.</p>
-</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr><td><p>&#34;InstallComplete&#34;</p></td>
+<td><p>CondInstallComplete means the install job has completed its execution successfully</p>
+</td>
+</tr><tr><td><p>&#34;InstallFailed&#34;</p></td>
+<td><p>CondInstallFailed means the install job has failed during execution.</p>
+</td>
+</tr><tr><td><p>&#34;InstallStarted&#34;</p></td>
+<td><p>CondInstallStarted means an install is in progress.</p>
+</td>
+</tr><tr><td><p>&#34;PreInstall&#34;</p></td>
+<td><p>CondPreInstall means an install about to start.</p>
+</td>
+</tr><tr><td><p>&#34;UninstallComplete&#34;</p></td>
+<td><p>CondUninstallComplete means the uninstall job has completed its execution successfully</p>
+</td>
+</tr><tr><td><p>&#34;UninstallFailed&#34;</p></td>
+<td><p>CondUninstallFailed means the uninstall job has failed during execution.</p>
+</td>
+</tr><tr><td><p>&#34;UninstallStarted&#34;</p></td>
+<td><p>CondUninstallStarted means an uninstall is in progress.</p>
+</td>
+</tr><tr><td><p>&#34;UpgradeComplete&#34;</p></td>
+<td><p>CondUpgradeComplete means the upgrade has completed successfully</p>
+</td>
+</tr><tr><td><p>&#34;UpgradeFailed&#34;</p></td>
+<td><p>CondUpgradeFailed means the upgrade has failed during execution.</p>
+</td>
+</tr><tr><td><p>&#34;UpgradePaused&#34;</p></td>
+<td><p>CondUpgradePaused means that an upgrade has been paused awaiting a VZ version update.</p>
+</td>
+</tr><tr><td><p>&#34;UpgradeStarted&#34;</p></td>
+<td><p>CondUpgradeStarted means that an upgrade has been started.</p>
+</td>
+</tr></tbody>
+</table>
 <h3 id="install.verrazzano.io/v1alpha1.ConsoleComponent">ConsoleComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>ConsoleComponent specifies the Verrazzano Console configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1479,7 +2018,7 @@ ConditionType
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -1491,23 +2030,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/helm_config/charts/verrazzano-console/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -1515,12 +2067,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>DNSComponent specifies the DNS configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1531,7 +2082,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>external</code></br>
+<code>external</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.External">
 External
@@ -1545,28 +2096,41 @@ External
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/external-dns/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>oci</code></br>
+<code>oci</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.OCI">
 OCI
@@ -1580,7 +2144,7 @@ OCI
 </tr>
 <tr>
 <td>
-<code>wildcard</code></br>
+<code>wildcard</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.Wildcard">
 Wildcard
@@ -1597,12 +2161,11 @@ Wildcard
 <h3 id="install.verrazzano.io/v1alpha1.DatabaseInfo">DatabaseInfo
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.GrafanaComponent">GrafanaComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.GrafanaComponent">GrafanaComponent</a>)
 </p>
-<p>
+<div>
 <p>DatabaseInfo specifies the database connection information for the Grafana DB instance.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1613,7 +2176,7 @@ Wildcard
 <tbody>
 <tr>
 <td>
-<code>host</code></br>
+<code>host</code><br/>
 <em>
 string
 </em>
@@ -1624,7 +2187,7 @@ string
 </tr>
 <tr>
 <td>
-<code>name</code></br>
+<code>name</code><br/>
 <em>
 string
 </em>
@@ -1638,12 +2201,11 @@ string
 <h3 id="install.verrazzano.io/v1alpha1.ElasticsearchComponent">ElasticsearchComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>ElasticsearchComponent specifies the Elasticsearch configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1654,7 +2216,7 @@ string
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -1666,7 +2228,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>installArgs</code></br>
+<code>installArgs</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.InstallArgs">
 []InstallArgs
@@ -1677,12 +2239,12 @@ bool
 <em>(Optional)</em>
 <p>A list of values to use during the OpenSearch installation. Each argument is specified as either a <code>name/value</code> or
 <code>name/valueList</code> pair. For sample usage, see
-<a href="../../../../docs/customize/opensearch/">Customize OpenSearch</a>.</p>
+<a href="../../../docs/observability/logging/configure-opensearch/opensearch/">Customize OpenSearch</a>.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>nodes</code></br>
+<code>nodes</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.OpenSearchNode">
 []OpenSearchNode
@@ -1696,7 +2258,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>policies</code></br>
+<code>policies</code><br/>
 <em>
 <a href="https://pkg.go.dev/github.com/verrazzano/verrazzano-monitoring-operator/pkg/apis/vmcontroller/v1#IndexManagementPolicy">
 []VMO /vmcontroller/v1.IndexManagementPolicy
@@ -1710,7 +2272,7 @@ to enable on OpenSearch.</p>
 </tr>
 <tr>
 <td>
-<code>plugins</code></br>
+<code>plugins</code><br/>
 <em>
 <a href="https://pkg.go.dev/github.com/verrazzano/verrazzano-monitoring-operator/pkg/apis/vmcontroller/v1#OpenSearchPlugins">
 VMO /vmcontroller/v1.OpenSearchPlugins
@@ -1724,7 +2286,7 @@ VMO /vmcontroller/v1.OpenSearchPlugins
 </tr>
 <tr>
 <td>
-<code>disableDefaultPolicy</code></br>
+<code>disableDefaultPolicy</code><br/>
 <em>
 bool
 </em>
@@ -1738,12 +2300,11 @@ bool
 <h3 id="install.verrazzano.io/v1alpha1.External">External
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>)
 </p>
-<p>
+<div>
 <p>External DNS type.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1754,7 +2315,7 @@ bool
 <tbody>
 <tr>
 <td>
-<code>suffix</code></br>
+<code>suffix</code><br/>
 <em>
 string
 </em>
@@ -1765,15 +2326,14 @@ string
 </tr>
 </tbody>
 </table>
-<h3 id="install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent
+<h3 id="install.verrazzano.io/v1alpha1.FluentOperatorComponent">FluentOperatorComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
-<p>FluentdComponent specifies the Fluentd configuration.</p>
-</p>
+<div>
+<p>FluentOperatorComponent specifies the Fluent Operator configuration.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1784,7 +2344,134 @@ string
 <tbody>
 <tr>
 <td>
-<code>elasticsearchSecret</code></br>
+<code>enabled</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>If true, then the Fluent Operator will be installed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>monitorChanges</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.FluentbitOpensearchOutputComponent">FluentbitOpensearchOutputComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+</p>
+<div>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>enabled</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>If true, then the FluentbitOpensearchOutput will be installed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>monitorChanges</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
+</a>
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+</p>
+<div>
+<p>FluentdComponent specifies the Fluentd configuration.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>elasticsearchSecret</code><br/>
 <em>
 string
 </em>
@@ -1800,7 +2487,7 @@ the VMI OpenSearch.</p>
 </tr>
 <tr>
 <td>
-<code>elasticsearchURL</code></br>
+<code>elasticsearchURL</code><br/>
 <em>
 string
 </em>
@@ -1814,7 +2501,7 @@ The default <code>http://vmi-system-es-ingest-oidc:8775</code> is the VMI OpenSe
 </tr>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -1826,7 +2513,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>extraVolumeMounts</code></br>
+<code>extraVolumeMounts</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VolumeMount">
 []VolumeMount
@@ -1844,28 +2531,41 @@ mount of that directory to collect the logs.</p>
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/helm_config/charts/verrazzano-fluentd/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>oci</code></br>
+<code>oci</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.OciLoggingConfiguration">
 OciLoggingConfiguration
@@ -1882,12 +2582,11 @@ OciLoggingConfiguration
 <h3 id="install.verrazzano.io/v1alpha1.GrafanaComponent">GrafanaComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>GrafanaComponent specifies the Grafana configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1898,7 +2597,7 @@ OciLoggingConfiguration
 <tbody>
 <tr>
 <td>
-<code>database</code></br>
+<code>database</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.DatabaseInfo">
 DatabaseInfo
@@ -1912,7 +2611,7 @@ DatabaseInfo
 </tr>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -1924,7 +2623,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>replicas</code></br>
+<code>replicas</code><br/>
 <em>
 int32
 </em>
@@ -1936,7 +2635,7 @@ int32
 </tr>
 <tr>
 <td>
-<code>smtp</code></br>
+<code>smtp</code><br/>
 <em>
 <a href="https://pkg.go.dev/github.com/verrazzano/verrazzano-monitoring-operator/pkg/apis/vmcontroller/v1#SMTPInfo">
 VMO /vmcontroller/v1.SMTPInfo
@@ -1953,12 +2652,11 @@ VMO /vmcontroller/v1.SMTPInfo
 <h3 id="install.verrazzano.io/v1alpha1.IngressNginxComponent">IngressNginxComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>IngressNginxComponent specifies the ingress-nginx configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1969,7 +2667,7 @@ VMO /vmcontroller/v1.SMTPInfo
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -1981,7 +2679,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>ingressClassName</code></br>
+<code>ingressClassName</code><br/>
 <em>
 string
 </em>
@@ -1993,28 +2691,41 @@ string
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/ingress-nginx/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>nginxInstallArgs</code></br>
+<code>nginxInstallArgs</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.InstallArgs">
 []InstallArgs
@@ -2028,7 +2739,7 @@ and invalid values will be ignored.</p>
 </tr>
 <tr>
 <td>
-<code>ports</code></br>
+<code>ports</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#serviceport-v1-core">
 []Kubernetes core/v1.ServicePort
@@ -2042,7 +2753,7 @@ and invalid values will be ignored.</p>
 </tr>
 <tr>
 <td>
-<code>type</code></br>
+<code>type</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IngressType">
 IngressType
@@ -2054,36 +2765,43 @@ IngressType
 <p>The ingress type. Valid values are <code>LoadBalancer</code> and <code>NodePort</code>. The default value is <code>LoadBalancer</code>. If the ingress
 type is <code>NodePort</code>, then a valid and accessible IP address must be specified using the <code>controller.service.externalIPs</code>
 key in NGINXInstallArgs. For sample usage, see
-<a href="../../../../docs/customize/externallbs/">External Load Balancers</a>.</p>
+<a href="../../../docs/networking/traffic/externallbs/">External Load Balancers</a>.</p>
 </td>
 </tr>
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.IngressType">IngressType
-(<code>string</code> alias)</p></h3>
+(<code>string</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.IngressNginxComponent">IngressNginxComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.IstioIngressSection">IstioIngressSection</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.IngressNginxComponent">IngressNginxComponent</a>, <a href="#install.verrazzano.io/v1alpha1.IstioIngressSection">IstioIngressSection</a>)
 </p>
-<p>
+<div>
 <p>IngressType is the type of ingress.</p>
-</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr><td><p>&#34;LoadBalancer&#34;</p></td>
+<td><p>LoadBalancer is an ingress type of LoadBalancer.  This is the default value.</p>
+</td>
+</tr><tr><td><p>&#34;NodePort&#34;</p></td>
+<td><p>NodePort is an ingress type of NodePort.</p>
+</td>
+</tr></tbody>
+</table>
 <h3 id="install.verrazzano.io/v1alpha1.InstallArgs">InstallArgs
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ElasticsearchComponent">ElasticsearchComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.IngressNginxComponent">IngressNginxComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.KeycloakComponent">KeycloakComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.MySQLComponent">MySQLComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoComponent">VerrazzanoComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ElasticsearchComponent">ElasticsearchComponent</a>, <a href="#install.verrazzano.io/v1alpha1.IngressNginxComponent">IngressNginxComponent</a>, <a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>, <a href="#install.verrazzano.io/v1alpha1.KeycloakComponent">KeycloakComponent</a>, <a href="#install.verrazzano.io/v1alpha1.MySQLComponent">MySQLComponent</a>, <a href="#install.verrazzano.io/v1alpha1.VerrazzanoComponent">VerrazzanoComponent</a>)
 </p>
-<p>
+<div>
 <p>InstallArgs identifies a name/value or name/value list needed for the install.
 Value and ValueList cannot both be specified.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2094,7 +2812,7 @@ Value and ValueList cannot both be specified.</p>
 <tbody>
 <tr>
 <td>
-<code>name</code></br>
+<code>name</code><br/>
 <em>
 string
 </em>
@@ -2105,7 +2823,7 @@ string
 </tr>
 <tr>
 <td>
-<code>value</code></br>
+<code>value</code><br/>
 <em>
 string
 </em>
@@ -2117,7 +2835,7 @@ string
 </tr>
 <tr>
 <td>
-<code>setString</code></br>
+<code>setString</code><br/>
 <em>
 bool
 </em>
@@ -2129,7 +2847,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>valueList</code></br>
+<code>valueList</code><br/>
 <em>
 []string
 </em>
@@ -2143,40 +2861,9 @@ bool
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides
 </h3>
-<p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ApplicationOperatorComponent">ApplicationOperatorComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.ArgoCDComponent">ArgoCDComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.AuthProxyComponent">AuthProxyComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.CertManagerComponent">CertManagerComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.ClusterOperatorComponent">ClusterOperatorComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.CoherenceOperatorComponent">CoherenceOperatorComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.ConsoleComponent">ConsoleComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.IngressNginxComponent">IngressNginxComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.JaegerOperatorComponent">JaegerOperatorComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.KeycloakComponent">KeycloakComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.KialiComponent">KialiComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.KubeStateMetricsComponent">KubeStateMetricsComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.MySQLComponent">MySQLComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.MySQLOperatorComponent">MySQLOperatorComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.OAMComponent">OAMComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.PrometheusAdapterComponent">PrometheusAdapterComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.PrometheusNodeExporterComponent">PrometheusNodeExporterComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.PrometheusOperatorComponent">PrometheusOperatorComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.PrometheusPushgatewayComponent">PrometheusPushgatewayComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.RancherBackupComponent">RancherBackupComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.RancherComponent">RancherComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.ThanosComponent">ThanosComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.VeleroComponent">VeleroComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoComponent">VerrazzanoComponent</a>,
-<a href="#install.verrazzano.io/v1alpha1.WebLogicOperatorComponent">WebLogicOperatorComponent</a>)
-</p>
-<p>
+<div>
 <p>InstallOverrides are used to pass installation overrides to components.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2187,7 +2874,7 @@ bool
 <tbody>
 <tr>
 <td>
-<code>monitorChanges</code></br>
+<code>monitorChanges</code><br/>
 <em>
 bool
 </em>
@@ -2199,7 +2886,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>overrides</code></br>
+<code>overrides</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.Overrides">
 []Overrides
@@ -2218,12 +2905,11 @@ Invalid override values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.InstanceInfo">InstanceInfo
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
 </p>
-<p>
+<div>
 <p>InstanceInfo details of installed Verrazzano instance maintained in status field.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2234,7 +2920,7 @@ Invalid override values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>argoCDUrl</code></br>
+<code>argoCDUrl</code><br/>
 <em>
 string
 </em>
@@ -2245,7 +2931,7 @@ string
 </tr>
 <tr>
 <td>
-<code>consoleUrl</code></br>
+<code>consoleUrl</code><br/>
 <em>
 string
 </em>
@@ -2256,7 +2942,7 @@ string
 </tr>
 <tr>
 <td>
-<code>elasticUrl</code></br>
+<code>elasticUrl</code><br/>
 <em>
 string
 </em>
@@ -2267,7 +2953,7 @@ string
 </tr>
 <tr>
 <td>
-<code>grafanaUrl</code></br>
+<code>grafanaUrl</code><br/>
 <em>
 string
 </em>
@@ -2278,7 +2964,7 @@ string
 </tr>
 <tr>
 <td>
-<code>jaegerUrl</code></br>
+<code>jaegerUrl</code><br/>
 <em>
 string
 </em>
@@ -2289,7 +2975,7 @@ string
 </tr>
 <tr>
 <td>
-<code>keyCloakUrl</code></br>
+<code>keyCloakUrl</code><br/>
 <em>
 string
 </em>
@@ -2300,7 +2986,7 @@ string
 </tr>
 <tr>
 <td>
-<code>kialiUrl</code></br>
+<code>kialiUrl</code><br/>
 <em>
 string
 </em>
@@ -2311,7 +2997,7 @@ string
 </tr>
 <tr>
 <td>
-<code>kibanaUrl</code></br>
+<code>kibanaUrl</code><br/>
 <em>
 string
 </em>
@@ -2322,7 +3008,7 @@ string
 </tr>
 <tr>
 <td>
-<code>prometheusUrl</code></br>
+<code>prometheusUrl</code><br/>
 <em>
 string
 </em>
@@ -2333,7 +3019,7 @@ string
 </tr>
 <tr>
 <td>
-<code>rancherUrl</code></br>
+<code>rancherUrl</code><br/>
 <em>
 string
 </em>
@@ -2344,7 +3030,7 @@ string
 </tr>
 <tr>
 <td>
-<code>thanosQueryUrl</code></br>
+<code>thanosQueryUrl</code><br/>
 <em>
 string
 </em>
@@ -2356,15 +3042,11 @@ The Thanos Query ingress gets forwarded to the Thanos Query Frontend service.</p
 </tr>
 </tbody>
 </table>
-<h3 id="install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent
+<h3 id="install.verrazzano.io/v1alpha1.IssuerConfig">IssuerConfig
 </h3>
-<p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
-</p>
-<p>
-<p>IstioComponent specifies the Istio configuration.</p>
-</p>
+<div>
+<p>IssuerConfig identifies the configuration for the Verrazzano ClusterIssuer.  Only one value may be set.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2375,7 +3057,53 @@ The Thanos Query ingress gets forwarded to the Thanos Query Frontend service.</p
 <tbody>
 <tr>
 <td>
-<code>egress</code></br>
+<code>letsEncrypt</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.LetsEncryptACMEIssuer">
+LetsEncryptACMEIssuer
+</a>
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>The certificate configuration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>ca</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.CAIssuer">
+CAIssuer
+</a>
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>The certificate configuration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+</p>
+<div>
+<p>IstioComponent specifies the Istio configuration.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>egress</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IstioEgressSection">
 IstioEgressSection
@@ -2389,7 +3117,7 @@ IstioEgressSection
 </tr>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -2401,7 +3129,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>ingress</code></br>
+<code>ingress</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IstioIngressSection">
 IstioIngressSection
@@ -2415,7 +3143,7 @@ IstioIngressSection
 </tr>
 <tr>
 <td>
-<code>injectionEnabled</code></br>
+<code>injectionEnabled</code><br/>
 <em>
 bool
 </em>
@@ -2427,27 +3155,41 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for default IstioOperator. Overrides are merged together, but in the event of conflicting
-fields, the last override in the list takes precedence over any others. You can find all possible values
-<a href="https://istio.io/v1.13/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec">here</a>
-Passing through an invalid IstioOperator resource will result in an error.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>istioInstallArgs</code></br>
+<code>istioInstallArgs</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.InstallArgs">
 []InstallArgs
@@ -2464,12 +3206,11 @@ Passing through an invalid IstioOperator resource will result in an error.</p>
 <h3 id="install.verrazzano.io/v1alpha1.IstioEgressSection">IstioEgressSection
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>)
 </p>
-<p>
+<div>
 <p>IstioEgressSection specifies the specific configuration options available for the Istio egress gateways.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2480,7 +3221,7 @@ Passing through an invalid IstioOperator resource will result in an error.</p>
 <tbody>
 <tr>
 <td>
-<code>kubernetes</code></br>
+<code>kubernetes</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IstioKubernetesSection">
 IstioKubernetesSection
@@ -2497,12 +3238,11 @@ IstioKubernetesSection
 <h3 id="install.verrazzano.io/v1alpha1.IstioIngressSection">IstioIngressSection
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>)
 </p>
-<p>
+<div>
 <p>IstioIngressSection specifies the specific configuration options available for the Istio ingress gateways.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2513,7 +3253,7 @@ IstioKubernetesSection
 <tbody>
 <tr>
 <td>
-<code>type</code></br>
+<code>type</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IngressType">
 IngressType
@@ -2525,12 +3265,12 @@ IngressType
 <p>The Istio ingress type. Valid values are <code>LoadBalancer</code> and <code>NodePort</code>. The default value is <code>LoadBalancer</code>. If the
 Istio ingress type is <code>NodePort</code>, then a valid and accessible IP address must be specified using the
 <code>gateways.istio-ingressgateway.externalIPs</code> key in IstioInstallArgs. For sample usage, see
-<a href="../../../../docs/customize/externallbs/">External Load Balancers</a>.</p>
+<a href="../../../docs/networking/traffic/externallbs/">External Load Balancers</a>.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>ports</code></br>
+<code>ports</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#serviceport-v1-core">
 []Kubernetes core/v1.ServicePort
@@ -2544,7 +3284,7 @@ Istio ingress type is <code>NodePort</code>, then a valid and accessible IP addr
 </tr>
 <tr>
 <td>
-<code>kubernetes</code></br>
+<code>kubernetes</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.IstioKubernetesSection">
 IstioKubernetesSection
@@ -2561,13 +3301,11 @@ IstioKubernetesSection
 <h3 id="install.verrazzano.io/v1alpha1.IstioKubernetesSection">IstioKubernetesSection
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.IstioEgressSection">IstioEgressSection</a>,
-<a href="#install.verrazzano.io/v1alpha1.IstioIngressSection">IstioIngressSection</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.IstioEgressSection">IstioEgressSection</a>, <a href="#install.verrazzano.io/v1alpha1.IstioIngressSection">IstioIngressSection</a>)
 </p>
-<p>
+<div>
 <p>IstioKubernetesSection specifies the Kubernetes resources that can be customized for Istio.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2578,17 +3316,34 @@ IstioKubernetesSection
 <tbody>
 <tr>
 <td>
-<code>CommonKubernetesSpec</code></br>
+<code>replicas</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.CommonKubernetesSpec">
-CommonKubernetesSpec
+uint32
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.CommonKubernetesSpec">CommonKubernetesSpec</a>.)
+</p>
+<em>(Optional)</em>
+<p>Specifies the number of pod instances to run.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>affinity</code><br/>
+<em>
+<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#affinity-v1-core">
+Kubernetes core/v1.Affinity
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>CommonKubernetesSpec</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.CommonKubernetesSpec">CommonKubernetesSpec</a>.)
 </p>
+<em>(Optional)</em>
+<p>Specifies the group of affinity scheduling rules.</p>
 </td>
 </tr>
 </tbody>
@@ -2596,12 +3351,11 @@ CommonKubernetesSpec
 <h3 id="install.verrazzano.io/v1alpha1.JaegerOperatorComponent">JaegerOperatorComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>JaegerOperatorComponent specifies the Jaeger Operator configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2612,7 +3366,7 @@ CommonKubernetesSpec
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -2624,23 +3378,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/jaegertracing/jaeger-operator/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -2648,12 +3415,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.KeycloakComponent">KeycloakComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>KeycloakComponent specifies the Keycloak configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2664,7 +3430,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -2676,28 +3442,41 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/keycloak/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>keycloakInstallArgs</code></br>
+<code>keycloakInstallArgs</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.InstallArgs">
 []InstallArgs
@@ -2711,7 +3490,7 @@ and invalid values will be ignored.</p>
 </tr>
 <tr>
 <td>
-<code>mysql</code></br>
+<code>mysql</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.MySQLComponent">
 MySQLComponent
@@ -2728,12 +3507,11 @@ MySQLComponent
 <h3 id="install.verrazzano.io/v1alpha1.KialiComponent">KialiComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>KialiComponent specifies the Kiali configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2744,7 +3522,7 @@ MySQLComponent
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -2756,23 +3534,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/kiali-server/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -2780,12 +3571,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.KibanaComponent">KibanaComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>KibanaComponent specifies the Kibana configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2796,7 +3586,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -2808,7 +3598,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>replicas</code></br>
+<code>replicas</code><br/>
 <em>
 int32
 </em>
@@ -2819,7 +3609,7 @@ int32
 </tr>
 <tr>
 <td>
-<code>plugins</code></br>
+<code>plugins</code><br/>
 <em>
 <a href="https://pkg.go.dev/github.com/verrazzano/verrazzano-monitoring-operator/pkg/apis/vmcontroller/v1#OpenSearchDashboardsPlugins">
 VMO /vmcontroller/v1.OpenSearchDashboardsPlugins
@@ -2836,12 +3626,11 @@ VMO /vmcontroller/v1.OpenSearchDashboardsPlugins
 <h3 id="install.verrazzano.io/v1alpha1.KubeStateMetricsComponent">KubeStateMetricsComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>KubeStateMetricsComponent specifies the kube-state-metrics configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2852,7 +3641,7 @@ VMO /vmcontroller/v1.OpenSearchDashboardsPlugins
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -2864,36 +3653,48 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/prometheus-community/kube-state-metrics/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<h3 id="install.verrazzano.io/v1alpha1.MySQLComponent">MySQLComponent
+<h3 id="install.verrazzano.io/v1alpha1.LetsEncryptACMEIssuer">LetsEncryptACMEIssuer
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.KeycloakComponent">KeycloakComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ClusterIssuerComponent">ClusterIssuerComponent</a>, <a href="#install.verrazzano.io/v1alpha1.IssuerConfig">IssuerConfig</a>)
 </p>
-<p>
-<p>MySQLComponent specifies the MySQL configuration.</p>
-</p>
+<div>
+<p>LetsEncryptACMEIssuer identifies the configuration used for the LetsEncrypt cert issuer</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2904,28 +3705,83 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>emailAddress</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+string
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>Email address of the user.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>environment</code><br/>
+<em>
+string
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>Environment can be &ldquo;staging&rdquo; or &ldquo;production&rdquo;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="install.verrazzano.io/v1alpha1.MySQLComponent">MySQLComponent
+</h3>
+<p>
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.KeycloakComponent">KeycloakComponent</a>)
+</p>
+<div>
+<p>MySQLComponent specifies the MySQL configuration.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>monitorChanges</code><br/>
+<em>
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/mysql/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>mysqlInstallArgs</code></br>
+<code>mysqlInstallArgs</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.InstallArgs">
 []InstallArgs
@@ -2939,7 +3795,7 @@ and invalid values will be ignored.</p>
 </tr>
 <tr>
 <td>
-<code>volumeSource</code></br>
+<code>volumeSource</code><br/>
 <em>
 <a href="https://pkg.go.dev/k8s.io/api/core/v1#VolumeSource">
 Kubernetes core/v1.VolumeSource
@@ -2959,12 +3815,11 @@ then the <code>claimName</code> must reference the name of a <code>VolumeClaimSp
 <h3 id="install.verrazzano.io/v1alpha1.MySQLOperatorComponent">MySQLOperatorComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>MySQLOperatorComponent specifies the MySQL Operator configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2975,7 +3830,7 @@ then the <code>claimName</code> must reference the name of a <code>VolumeClaimSp
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -2987,23 +3842,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/mysql-operator/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3011,12 +3879,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.OAMComponent">OAMComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>OAMComponent specifies the OAM configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3027,7 +3894,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3039,23 +3906,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/oam-kubernetes-runtime/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3063,12 +3943,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.OCI">OCI
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>)
 </p>
-<p>
+<div>
 <p>OCI DNS type.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3079,7 +3958,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>dnsScope</code></br>
+<code>dnsScope</code><br/>
 <em>
 string
 </em>
@@ -3091,7 +3970,7 @@ string
 </tr>
 <tr>
 <td>
-<code>dnsZoneCompartmentOCID</code></br>
+<code>dnsZoneCompartmentOCID</code><br/>
 <em>
 string
 </em>
@@ -3102,7 +3981,7 @@ string
 </tr>
 <tr>
 <td>
-<code>dnsZoneOCID</code></br>
+<code>dnsZoneOCID</code><br/>
 <em>
 string
 </em>
@@ -3113,7 +3992,7 @@ string
 </tr>
 <tr>
 <td>
-<code>dnsZoneName</code></br>
+<code>dnsZoneName</code><br/>
 <em>
 string
 </em>
@@ -3124,7 +4003,7 @@ string
 </tr>
 <tr>
 <td>
-<code>ociConfigSecret</code></br>
+<code>ociConfigSecret</code><br/>
 <em>
 string
 </em>
@@ -3140,12 +4019,11 @@ Oracle Cloud Infrastructure configuration profile you want to use. You can speci
 <h3 id="install.verrazzano.io/v1alpha1.OciLoggingConfiguration">OciLoggingConfiguration
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent</a>)
 </p>
-<p>
+<div>
 <p>OciLoggingConfiguration is the Oracle Cloud Infrastructure logging configuration for Fluentd.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3156,7 +4034,7 @@ Oracle Cloud Infrastructure configuration profile you want to use. You can speci
 <tbody>
 <tr>
 <td>
-<code>apiSecret</code></br>
+<code>apiSecret</code><br/>
 <em>
 string
 </em>
@@ -3168,7 +4046,7 @@ string
 </tr>
 <tr>
 <td>
-<code>defaultAppLogId</code></br>
+<code>defaultAppLogId</code><br/>
 <em>
 string
 </em>
@@ -3179,7 +4057,7 @@ string
 </tr>
 <tr>
 <td>
-<code>systemLogId</code></br>
+<code>systemLogId</code><br/>
 <em>
 string
 </em>
@@ -3193,12 +4071,11 @@ string
 <h3 id="install.verrazzano.io/v1alpha1.OpenSearchNode">OpenSearchNode
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ElasticsearchComponent">ElasticsearchComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ElasticsearchComponent">ElasticsearchComponent</a>)
 </p>
-<p>
+<div>
 <p>OpenSearchNode specifies a node group in the OpenSearch cluster.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3209,7 +4086,7 @@ string
 <tbody>
 <tr>
 <td>
-<code>name</code></br>
+<code>name</code><br/>
 <em>
 string
 </em>
@@ -3220,7 +4097,7 @@ string
 </tr>
 <tr>
 <td>
-<code>replicas</code></br>
+<code>replicas</code><br/>
 <em>
 int32
 </em>
@@ -3232,7 +4109,7 @@ int32
 </tr>
 <tr>
 <td>
-<code>resources</code></br>
+<code>resources</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#resourcerequirements-v1-core">
 Kubernetes core/v1.ResourceRequirements
@@ -3246,7 +4123,7 @@ Kubernetes core/v1.ResourceRequirements
 </tr>
 <tr>
 <td>
-<code>roles</code></br>
+<code>roles</code><br/>
 <em>
 <a href="https://pkg.go.dev/github.com/verrazzano/verrazzano-monitoring-operator/pkg/apis/vmcontroller/v1#NodeRole">
 []VMO /vmcontroller/v1.NodeRole
@@ -3259,7 +4136,7 @@ Kubernetes core/v1.ResourceRequirements
 </tr>
 <tr>
 <td>
-<code>storage</code></br>
+<code>storage</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.OpenSearchNodeStorage">
 OpenSearchNodeStorage
@@ -3273,7 +4150,7 @@ OpenSearchNodeStorage
 </tr>
 <tr>
 <td>
-<code>javaOpts</code></br>
+<code>javaOpts</code><br/>
 <em>
 string
 </em>
@@ -3288,11 +4165,10 @@ string
 <h3 id="install.verrazzano.io/v1alpha1.OpenSearchNodeStorage">OpenSearchNodeStorage
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.OpenSearchNode">OpenSearchNode</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.OpenSearchNode">OpenSearchNode</a>)
 </p>
-<p>
-</p>
+<div>
+</div>
 <table>
 <thead>
 <tr>
@@ -3303,7 +4179,7 @@ string
 <tbody>
 <tr>
 <td>
-<code>size</code></br>
+<code>size</code><br/>
 <em>
 string
 </em>
@@ -3318,12 +4194,11 @@ string
 <h3 id="install.verrazzano.io/v1alpha1.Overrides">Overrides
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ApplicationOperatorComponent">ApplicationOperatorComponent</a>, <a href="#install.verrazzano.io/v1alpha1.ArgoCDComponent">ArgoCDComponent</a>, <a href="#install.verrazzano.io/v1alpha1.AuthProxyComponent">AuthProxyComponent</a>, <a href="#install.verrazzano.io/v1alpha1.CertManagerComponent">CertManagerComponent</a>, <a href="#install.verrazzano.io/v1alpha1.CertManagerOCIDNSWebhookSolver">CertManagerOCIDNSWebhookSolver</a>, <a href="#install.verrazzano.io/v1alpha1.CertManagerWebhookOCIComponent">CertManagerWebhookOCIComponent</a>, <a href="#install.verrazzano.io/v1alpha1.ClusterAPIComponent">ClusterAPIComponent</a>, <a href="#install.verrazzano.io/v1alpha1.ClusterAgentComponent">ClusterAgentComponent</a>, <a href="#install.verrazzano.io/v1alpha1.ClusterOperatorComponent">ClusterOperatorComponent</a>, <a href="#install.verrazzano.io/v1alpha1.CoherenceOperatorComponent">CoherenceOperatorComponent</a>, <a href="#install.verrazzano.io/v1alpha1.ConsoleComponent">ConsoleComponent</a>, <a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>, <a href="#install.verrazzano.io/v1alpha1.FluentOperatorComponent">FluentOperatorComponent</a>, <a href="#install.verrazzano.io/v1alpha1.FluentbitOpensearchOutputComponent">FluentbitOpensearchOutputComponent</a>, <a href="#install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent</a>, <a href="#install.verrazzano.io/v1alpha1.IngressNginxComponent">IngressNginxComponent</a>, <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>, <a href="#install.verrazzano.io/v1alpha1.IstioComponent">IstioComponent</a>, <a href="#install.verrazzano.io/v1alpha1.JaegerOperatorComponent">JaegerOperatorComponent</a>, <a href="#install.verrazzano.io/v1alpha1.KeycloakComponent">KeycloakComponent</a>, <a href="#install.verrazzano.io/v1alpha1.KialiComponent">KialiComponent</a>, <a href="#install.verrazzano.io/v1alpha1.KubeStateMetricsComponent">KubeStateMetricsComponent</a>, <a href="#install.verrazzano.io/v1alpha1.MySQLComponent">MySQLComponent</a>, <a href="#install.verrazzano.io/v1alpha1.MySQLOperatorComponent">MySQLOperatorComponent</a>, <a href="#install.verrazzano.io/v1alpha1.OAMComponent">OAMComponent</a>, <a href="#install.verrazzano.io/v1alpha1.PrometheusAdapterComponent">PrometheusAdapterComponent</a>, <a href="#install.verrazzano.io/v1alpha1.PrometheusNodeExporterComponent">PrometheusNodeExporterComponent</a>, <a href="#install.verrazzano.io/v1alpha1.PrometheusOperatorComponent">PrometheusOperatorComponent</a>, <a href="#install.verrazzano.io/v1alpha1.PrometheusPushgatewayComponent">PrometheusPushgatewayComponent</a>, <a href="#install.verrazzano.io/v1alpha1.RancherBackupComponent">RancherBackupComponent</a>, <a href="#install.verrazzano.io/v1alpha1.RancherComponent">RancherComponent</a>, <a href="#install.verrazzano.io/v1alpha1.ThanosComponent">ThanosComponent</a>, <a href="#install.verrazzano.io/v1alpha1.VeleroComponent">VeleroComponent</a>, <a href="#install.verrazzano.io/v1alpha1.VerrazzanoComponent">VerrazzanoComponent</a>, <a href="#install.verrazzano.io/v1alpha1.WebLogicOperatorComponent">WebLogicOperatorComponent</a>)
 </p>
-<p>
+<div>
 <p>Overrides identifies overrides for a component.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3334,7 +4209,7 @@ string
 <tbody>
 <tr>
 <td>
-<code>configMapRef</code></br>
+<code>configMapRef</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#configmapkeyselector-v1-core">
 Kubernetes core/v1.ConfigMapKeySelector
@@ -3345,12 +4220,12 @@ Kubernetes core/v1.ConfigMapKeySelector
 <em>(Optional)</em>
 <p>Selector for ConfigMap containing override data.
 For sample usage, see
-<a href="../../../../docs/customize/installationoverrides/#configmap">ConfigMapRef</a>.</p>
+<a href="../../../docs/setup/installationoverrides/#configmap">ConfigMapRef</a>.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>secretRef</code></br>
+<code>secretRef</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#secretkeyselector-v1-core">
 Kubernetes core/v1.SecretKeySelector
@@ -3361,12 +4236,12 @@ Kubernetes core/v1.SecretKeySelector
 <em>(Optional)</em>
 <p>Selector for Secret containing override data.
 For sample usage, see
-<a href="../../../../docs/customize/installationoverrides/#secret">SecretRef</a>.</p>
+<a href="../../../docs/setup/installationoverrides/#secret">SecretRef</a>.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>values</code></br>
+<code>values</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#json-v1-apiextensions-k8s-io">
 Kubernetes apiextensions/v1.JSON
@@ -3377,29 +4252,48 @@ Kubernetes apiextensions/v1.JSON
 <em>(Optional)</em>
 <p>Configure overrides using inline YAML.
 For sample usage, see
-<a href="../../../../docs/customize/installationoverrides/#values">Values</a>.</p>
+<a href="../../../docs/setup/installationoverrides/#values">Values</a>.</p>
 </td>
 </tr>
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.ProfileType">ProfileType
-(<code>string</code> alias)</p></h3>
+(<code>string</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
 </p>
-<p>
+<div>
 <p>ProfileType is the type of installation profile.</p>
-</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr><td><p>&#34;dev&#34;</p></td>
+<td><p>Dev identifies the development install profile</p>
+</td>
+</tr><tr><td><p>&#34;managed-cluster&#34;</p></td>
+<td><p>ManagedCluster identifies the production managed-cluster install profile</p>
+</td>
+</tr><tr><td><p>&#34;none&#34;</p></td>
+<td><p>None identifies a profile with all components disabled</p>
+</td>
+</tr><tr><td><p>&#34;prod&#34;</p></td>
+<td><p>Prod identifies the production install profile</p>
+</td>
+</tr></tbody>
+</table>
 <h3 id="install.verrazzano.io/v1alpha1.PrometheusAdapterComponent">PrometheusAdapterComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>PrometheusAdapterComponent specifies the Prometheus Adapter configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3410,7 +4304,7 @@ For sample usage, see
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3422,23 +4316,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/prometheus-community/prometheus-adapter/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3446,12 +4353,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.PrometheusComponent">PrometheusComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>PrometheusComponent specifies the Prometheus configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3462,7 +4368,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3479,12 +4385,11 @@ This is a legacy setting; the preferred way to configure Prometheus is using the
 <h3 id="install.verrazzano.io/v1alpha1.PrometheusNodeExporterComponent">PrometheusNodeExporterComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>PrometheusNodeExporterComponent specifies the Prometheus Node Exporter configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3495,7 +4400,7 @@ This is a legacy setting; the preferred way to configure Prometheus is using the
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3507,23 +4412,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/prometheus-community/prometheus-node-exporter/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3531,12 +4449,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.PrometheusOperatorComponent">PrometheusOperatorComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>PrometheusOperatorComponent specifies the Prometheus Operator configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3547,7 +4464,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3559,23 +4476,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/prometheus-community/kube-prometheus-stack/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3583,12 +4513,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.PrometheusPushgatewayComponent">PrometheusPushgatewayComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>PrometheusPushgatewayComponent specifies the Prometheus Pushgateway configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3599,7 +4528,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3611,45 +4540,68 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/prometheus-community/prometheus-pushgateway/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.ProviderType">ProviderType
-(<code>string</code> alias)</p></h3>
+(<code>string</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.Acme">Acme</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.Acme">Acme</a>)
 </p>
-<p>
+<div>
 <p>ProviderType identifies Acme provider type.</p>
-</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr><td><p>&#34;LetsEncrypt&#34;</p></td>
+<td><p>LetsEncrypt is a Let&rsquo;s Encrypt provider</p>
+</td>
+</tr></tbody>
+</table>
 <h3 id="install.verrazzano.io/v1alpha1.RancherBackupComponent">RancherBackupComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>RancherBackupComponent specifies the rancherBackup configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3660,7 +4612,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3672,23 +4624,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/rancher-backup/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3696,12 +4661,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.RancherComponent">RancherComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>RancherComponent specifies the Rancher configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3712,7 +4676,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3724,28 +4688,41 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/rancher/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 <tr>
 <td>
-<code>keycloakAuthEnabled</code></br>
+<code>keycloakAuthEnabled</code><br/>
 <em>
 bool
 </em>
@@ -3760,12 +4737,11 @@ bool
 <h3 id="install.verrazzano.io/v1alpha1.SecuritySpec">SecuritySpec
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
 </p>
-<p>
+<div>
 <p>SecuritySpec defines the security configuration for Verrazzano.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3776,7 +4752,7 @@ bool
 <tbody>
 <tr>
 <td>
-<code>adminSubjects</code></br>
+<code>adminSubjects</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#subject-v1-rbac-authorization-k8s-io">
 []Kubernetes rbac/v1.Subject
@@ -3790,7 +4766,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>monitorSubjects</code></br>
+<code>monitorSubjects</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#subject-v1-rbac-authorization-k8s-io">
 []Kubernetes rbac/v1.Subject
@@ -3807,12 +4783,11 @@ bool
 <h3 id="install.verrazzano.io/v1alpha1.ThanosComponent">ThanosComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>ThanosComponent specifies the Thanos configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3823,7 +4798,7 @@ bool
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3835,23 +4810,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/thanos/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3859,12 +4847,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.VeleroComponent">VeleroComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>VeleroComponent specifies the Velero configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3875,7 +4862,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3887,23 +4874,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/velero/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3911,12 +4911,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.VerrazzanoComponent">VerrazzanoComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>VerrazzanoComponent specifies the Verrazzano configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3927,7 +4926,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -3939,7 +4938,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>installArgs</code></br>
+<code>installArgs</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.InstallArgs">
 []InstallArgs
@@ -3953,23 +4952,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/helm_config/charts/verrazzano/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -3977,12 +4989,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.Verrazzano">Verrazzano</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.Verrazzano">Verrazzano</a>)
 </p>
-<p>
+<div>
 <p>VerrazzanoSpec defines the desired state of a Verrazzano resource.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -3993,7 +5004,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>components</code></br>
+<code>components</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ComponentSpec">
 ComponentSpec
@@ -4007,7 +5018,7 @@ ComponentSpec
 </tr>
 <tr>
 <td>
-<code>defaultVolumeSource</code></br>
+<code>defaultVolumeSource</code><br/>
 <em>
 <a href="https://pkg.go.dev/k8s.io/api/core/v1#VolumeSource">
 Kubernetes core/v1.VolumeSource
@@ -4024,7 +5035,7 @@ declared, then the <code>claimName</code> must reference the name of an existing
 </tr>
 <tr>
 <td>
-<code>environmentName</code></br>
+<code>environmentName</code><br/>
 <em>
 string
 </em>
@@ -4037,7 +5048,7 @@ The default value is <code>default</code>.</p>
 </tr>
 <tr>
 <td>
-<code>profile</code></br>
+<code>profile</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ProfileType">
 ProfileType
@@ -4052,7 +5063,7 @@ The default is <code>prod</code>.</p>
 </tr>
 <tr>
 <td>
-<code>security</code></br>
+<code>security</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.SecuritySpec">
 SecuritySpec
@@ -4066,7 +5077,7 @@ SecuritySpec
 </tr>
 <tr>
 <td>
-<code>version</code></br>
+<code>version</code><br/>
 <em>
 string
 </em>
@@ -4080,7 +5091,7 @@ Defaults to the current version supported by the Verrazzano platform operator.</
 </tr>
 <tr>
 <td>
-<code>volumeClaimSpecTemplates</code></br>
+<code>volumeClaimSpecTemplates</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VolumeClaimSpecTemplate">
 []VolumeClaimSpecTemplate
@@ -4097,12 +5108,11 @@ Defaults to the current version supported by the Verrazzano platform operator.</
 <h3 id="install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.Verrazzano">Verrazzano</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.Verrazzano">Verrazzano</a>)
 </p>
-<p>
+<div>
 <p>VerrazzanoStatus defines the observed state of a Verrazzano resource.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -4113,7 +5123,7 @@ Defaults to the current version supported by the Verrazzano platform operator.</
 <tbody>
 <tr>
 <td>
-<code>available</code></br>
+<code>available</code><br/>
 <em>
 string
 </em>
@@ -4124,7 +5134,7 @@ string
 </tr>
 <tr>
 <td>
-<code>components</code></br>
+<code>components</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.ComponentStatusMap">
 ComponentStatusMap
@@ -4137,7 +5147,7 @@ ComponentStatusMap
 </tr>
 <tr>
 <td>
-<code>conditions</code></br>
+<code>conditions</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.Condition">
 []Condition
@@ -4150,7 +5160,7 @@ ComponentStatusMap
 </tr>
 <tr>
 <td>
-<code>state</code></br>
+<code>state</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.VzStateType">
 VzStateType
@@ -4163,7 +5173,7 @@ VzStateType
 </tr>
 <tr>
 <td>
-<code>instance</code></br>
+<code>instance</code><br/>
 <em>
 <a href="#install.verrazzano.io/v1alpha1.InstanceInfo">
 InstanceInfo
@@ -4176,7 +5186,7 @@ InstanceInfo
 </tr>
 <tr>
 <td>
-<code>version</code></br>
+<code>version</code><br/>
 <em>
 string
 </em>
@@ -4190,14 +5200,13 @@ string
 <h3 id="install.verrazzano.io/v1alpha1.VolumeClaimSpecTemplate">VolumeClaimSpecTemplate
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.VerrazzanoSpec">VerrazzanoSpec</a>)
 </p>
-<p>
+<div>
 <p>VolumeClaimSpecTemplate Contains common PVC configurations that can be referenced from Components; these
 do not actually result in generated PVCs, but can be used to provide common configurations to components that
 declare a PersistentVolumeClaimVolumeSource.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -4208,7 +5217,7 @@ declare a PersistentVolumeClaimVolumeSource.</p>
 <tbody>
 <tr>
 <td>
-<code>metadata</code></br>
+<code>metadata</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#objectmeta-v1-meta">
 Kubernetes meta/v1.ObjectMeta
@@ -4223,7 +5232,7 @@ Refer to the Kubernetes API documentation for the fields of the
 </tr>
 <tr>
 <td>
-<code>spec</code></br>
+<code>spec</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#persistentvolumeclaimspec-v1-core">
 Kubernetes core/v1.PersistentVolumeClaimSpec
@@ -4239,7 +5248,7 @@ the component.</p>
 <table>
 <tr>
 <td>
-<code>accessModes</code></br>
+<code>accessModes</code><br/>
 <em>
 <a href="https://pkg.go.dev/k8s.io/api/core/v1#PersistentVolumeAccessMode">
 []Kubernetes core/v1.PersistentVolumeAccessMode
@@ -4254,7 +5263,7 @@ More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volum
 </tr>
 <tr>
 <td>
-<code>selector</code></br>
+<code>selector</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#labelselector-v1-meta">
 Kubernetes meta/v1.LabelSelector
@@ -4268,7 +5277,7 @@ Kubernetes meta/v1.LabelSelector
 </tr>
 <tr>
 <td>
-<code>resources</code></br>
+<code>resources</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#resourcerequirements-v1-core">
 Kubernetes core/v1.ResourceRequirements
@@ -4286,7 +5295,7 @@ More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volum
 </tr>
 <tr>
 <td>
-<code>volumeName</code></br>
+<code>volumeName</code><br/>
 <em>
 string
 </em>
@@ -4298,7 +5307,7 @@ string
 </tr>
 <tr>
 <td>
-<code>storageClassName</code></br>
+<code>storageClassName</code><br/>
 <em>
 string
 </em>
@@ -4311,7 +5320,7 @@ More info: <a href="https://kubernetes.io/docs/concepts/storage/persistent-volum
 </tr>
 <tr>
 <td>
-<code>volumeMode</code></br>
+<code>volumeMode</code><br/>
 <em>
 <a href="https://pkg.go.dev/k8s.io/api/core/v1#PersistentVolumeMode">
 Kubernetes core/v1.PersistentVolumeMode
@@ -4326,7 +5335,7 @@ Value of Filesystem is implied when not included in claim spec.</p>
 </tr>
 <tr>
 <td>
-<code>dataSource</code></br>
+<code>dataSource</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#typedlocalobjectreference-v1-core">
 Kubernetes core/v1.TypedLocalObjectReference
@@ -4346,7 +5355,7 @@ the same contents as the DataSourceRef field.</p>
 </tr>
 <tr>
 <td>
-<code>dataSourceRef</code></br>
+<code>dataSourceRef</code><br/>
 <em>
 <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#typedlocalobjectreference-v1-core">
 Kubernetes core/v1.TypedLocalObjectReference
@@ -4382,12 +5391,11 @@ specified.
 <h3 id="install.verrazzano.io/v1alpha1.VolumeMount">VolumeMount
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.FluentdComponent">FluentdComponent</a>)
 </p>
-<p>
+<div>
 <p>VolumeMount defines a hostPath type volume mount.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -4398,7 +5406,7 @@ specified.
 <tbody>
 <tr>
 <td>
-<code>destination</code></br>
+<code>destination</code><br/>
 <em>
 string
 </em>
@@ -4410,7 +5418,7 @@ string
 </tr>
 <tr>
 <td>
-<code>readOnly</code></br>
+<code>readOnly</code><br/>
 <em>
 bool
 </em>
@@ -4422,7 +5430,7 @@ bool
 </tr>
 <tr>
 <td>
-<code>source</code></br>
+<code>source</code><br/>
 <em>
 string
 </em>
@@ -4434,23 +5442,48 @@ string
 </tbody>
 </table>
 <h3 id="install.verrazzano.io/v1alpha1.VzStateType">VzStateType
-(<code>string</code> alias)</p></h3>
+(<code>string</code> alias)</h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.VerrazzanoStatus">VerrazzanoStatus</a>)
 </p>
-<p>
+<div>
 <p>VzStateType identifies the state of a Verrazzano installation.</p>
-</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr><td><p>&#34;Failed&#34;</p></td>
+<td><p>VzStateFailed is the state when an install/uninstall/upgrade has failed</p>
+</td>
+</tr><tr><td><p>&#34;Paused&#34;</p></td>
+<td><p>VzStatePaused is the state when an upgrade is paused due to version mismatch</p>
+</td>
+</tr><tr><td><p>&#34;Ready&#34;</p></td>
+<td><p>VzStateReady is the state when a Verrazzano resource can perform an uninstall or upgrade</p>
+</td>
+</tr><tr><td><p>&#34;Reconciling&#34;</p></td>
+<td><p>VzStateReconciling is the state when a resource is in progress reconciling</p>
+</td>
+</tr><tr><td><p>&#34;Uninstalling&#34;</p></td>
+<td><p>VzStateUninstalling is the state when an uninstall is in progress</p>
+</td>
+</tr><tr><td><p>&#34;Upgrading&#34;</p></td>
+<td><p>VzStateUpgrading is the state when an upgrade is in progress</p>
+</td>
+</tr></tbody>
+</table>
 <h3 id="install.verrazzano.io/v1alpha1.WebLogicOperatorComponent">WebLogicOperatorComponent
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.ComponentSpec">ComponentSpec</a>)
 </p>
-<p>
+<div>
 <p>WebLogicOperatorComponent specifies the WebLogic Kubernetes Operator configuration.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -4461,7 +5494,7 @@ string
 <tbody>
 <tr>
 <td>
-<code>enabled</code></br>
+<code>enabled</code><br/>
 <em>
 bool
 </em>
@@ -4473,23 +5506,36 @@ bool
 </tr>
 <tr>
 <td>
-<code>InstallOverrides</code></br>
+<code>monitorChanges</code><br/>
 <em>
-<a href="#install.verrazzano.io/v1alpha1.InstallOverrides">
-InstallOverrides
+bool
+</em>
+</td>
+<td>
+<p>
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
+</p>
+<em>(Optional)</em>
+<p>If false, then Verrazzano updates will ignore any configuration changes to this component. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>overrides</code><br/>
+<em>
+<a href="#install.verrazzano.io/v1alpha1.Overrides">
+[]Overrides
 </a>
 </em>
 </td>
 <td>
 <p>
-(Members of <code>InstallOverrides</code> are embedded into this type.)
+(Inlined from <a href="#install.verrazzano.io/v1alpha1.InstallOverrides">InstallOverrides</a>.)
 </p>
 <em>(Optional)</em>
-<p>List of Overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
-but in the event of conflicting fields, the last override in the list takes precedence over any others. You can
-find all possible values
-<a href="{{% release_source_url path=platform-operator/thirdparty/charts/weblogic-operator/values.yaml %}}">here</a>
-and invalid values will be ignored.</p>
+<p>List of overrides for the default <code>values.yaml</code> file for the component Helm chart. Overrides are merged together,
+but in the event of conflicting fields, the last override in the list takes precedence over any others.
+Invalid override values will be ignored.</p>
 </td>
 </tr>
 </tbody>
@@ -4497,12 +5543,11 @@ and invalid values will be ignored.</p>
 <h3 id="install.verrazzano.io/v1alpha1.Wildcard">Wildcard
 </h3>
 <p>
-(<em>Appears on:</em>
-<a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>)
+(<em>Appears on:</em><a href="#install.verrazzano.io/v1alpha1.DNSComponent">DNSComponent</a>)
 </p>
-<p>
+<div>
 <p>Wildcard DNS type.</p>
-</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -4513,7 +5558,7 @@ and invalid values will be ignored.</p>
 <tbody>
 <tr>
 <td>
-<code>domain</code></br>
+<code>domain</code><br/>
 <em>
 string
 </em>
@@ -4527,4 +5572,10 @@ string
 <hr/>
 <p><em>
 Generated with <code>gen-crd-api-reference-docs</code>
+on git commit <code>238db2c3e</code>.
 </em></p>
+
+
+
+
+

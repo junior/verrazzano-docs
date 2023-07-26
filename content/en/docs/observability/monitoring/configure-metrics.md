@@ -1,16 +1,16 @@
 ---
-title: "Monitor Components in Verrazzano"
-linkTitle: Monitor Components
-description: "Understand Verrazzano metrics gathering and viewing"
+title: "Understand Monitoring Components in Verrazzano"
+description: "Learn about Verrazzano metrics gathering and viewing"
 weight: 1
 draft: false
 ---
 
-
-The Verrazzano metrics stack automates metrics aggregation and consists of Prometheus and Grafana components.
+The Verrazzano metrics stack automates metrics aggregation and consists of Prometheus, Thanos, and Grafana components.
 Metrics sources expose system and application metrics.
-The Prometheus components retrieve and store the metrics and Grafana provides dashboards to
+The Prometheus and Thanos components retrieve and store the metrics and Grafana provides dashboards to
 visualize them.
+
+The following is a representation of metrics collection in a single cluster environment.
 
 ![Metrics](/docs/images/metrics.png)
 
@@ -102,7 +102,10 @@ For example, for the previous metric source:
 
 Verrazzano supports enabling metric sources for Kubernetes workloads deployed without OAM Components.
 To enable metrics for Kubernetes workloads, you must create a Service Monitor or Pod Monitor, as applicable.
+
+Metrics Traits use Service Monitors which require [Services](https://kubernetes.io/docs/concepts/services-networking/service/) for metrics collection.<br>
 For details on Service Monitor and Pod Monitor, refer to the [Prometheus Operator documentation](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/getting-started.md).
+
 
 When creating the Service Monitor or Pod Monitor for your workload, include the label `release`, with the value
 `prometheus-operator` on the monitor resource.
@@ -110,7 +113,7 @@ When creating the Service Monitor or Pod Monitor for your workload, include the 
 #### Verify metrics collection
 
 To verify that the metrics are being collected for your workload, follow these steps.
-1. Access the [Prometheus console]({{< relref "/docs/access/_index.md" >}}).
+1. Access the [Prometheus console]({{< relref "/docs/setup/access/_index.md" >}}).
 2. From the console, use the navigation bar to access Status/Targets.
 3. On this page, you will see a target name with this formatting: `<monitor-type>/<workload-namespace>_<workload-name>_<workload-type>`, where `monitor-type` may be serviceMonitor or podMonitor.
 4. Copy this job name from the target labels for use in future queries.
@@ -119,7 +122,6 @@ To verify that the metrics are being collected for your workload, follow these s
 7. Here, use the job name you copied to construct this expression: `{job="<job_name>"}`
 8. Use the graph to run this expression and verify that you see application metrics appear.
 
-Metrics Traits use Service Monitors which require [Services](https://kubernetes.io/docs/concepts/services-networking/service/) for metrics collection.
 If you are unable to verify metrics collection, you might need to manually create a Service for the workload.
 
 For more information on Prometheus solutions, see [Troubleshooting Prometheus]({{< relref "/docs/observability/monitoring/troubleshooting-prometheus.md" >}}).
